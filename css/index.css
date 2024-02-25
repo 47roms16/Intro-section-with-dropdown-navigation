@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .max-container {
+    max-width: 1440px;
+    margin-inline: auto;
+  }
+
+  :is(.nav__button:hover, .nav__button:focus-within) svg path {
+    @apply fill-almost-black;
+  }
+
+  .dropdown {
+    max-height: 0;
+    box-shadow: 0px 2px 50px hsl(0, 7%, 84%);
+    pointer-events: none;
+    overflow: hidden;
+    transition: max-height 700ms ease-in-out;
+  }
+
+  .dropdown.active {
+    max-height: 10rem;
+    pointer-events: auto;
+  }
+
+  .mobile-dropdown {
+    max-height: 0;
+    pointer-events: none;
+    overflow: hidden;
+    transition: max-height 700ms ease-in-out;
+  }
+
+  .mobile-dropdown.active {
+    max-height: 16rem;
+    pointer-events: auto;
+  }
+
+  .nav__button-dropdown .icon {
+    transition: all 700ms ease-in-out;
+  }
+
+  .nav__button-dropdown.active .icon {
+    transform: rotateX(180deg);
+    transition: all 700ms ease-in-out;
+  }
+
+  .nav__button-menu {
+    width: 40px;
+    height: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  .menu-icon,
+  .menu-icon::before,
+  .menu-icon::after {
+    background-color: black;
+    width: 32px;
+    height: 2px;
+    border-radius: 5px;
+    position: absolute;
+    transition: all 700ms;
+  }
+
+  .menu-icon::before,
+  .menu-icon::after {
+    content: "";
+  }
+
+  .menu-icon::before {
+    transform: translate(-16px, -12px);
+  }
+  .menu-icon::after {
+    transform: translate(-16px, 12px);
+  }
+
+  .menu-icon.active {
+    background-color: transparent;
+  }
+
+  .menu-icon.active::before {
+    transform: translateX(-16px) rotate(-45deg);
+  }
+
+  .menu-icon.active::after {
+    transform: translateX(-16px) rotate(45deg);
+  }
+
+  .mobile-nav {
+    transform: translateX(100%);
+    transition: transform 700ms ease-in-out;
+  }
+
+  .mobile-nav.active {
+    transform: translateX(0);
+    transition: transform 700ms ease-in-out;
+  }
+
+  body.active::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    transition: background-color 700ms ease-in-out;
+  }
+}
+
+.preload * {
+  transition: none !important;
+}
+
+/* || RESET || */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font: inherit;
+}
+
+/* Heading & paragraph */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+p {
+  max-width: 75ch;
+  text-wrap: pretty;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"],
+li {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html {
+  overflow-x: hidden;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  overflow-x: hidden;
+  font-family: "Epilogue", sans-serif;
+}
+
+/* Elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  display: inline-block;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+    scroll-padding-top: 3rem; /* change depends on sticky header  */
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/*  */
+hr {
+  max-width: 100%;
+}
+
+/* || END || */

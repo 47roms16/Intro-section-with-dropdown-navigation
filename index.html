@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Intro Section With Dropdown Navigation</title>
+  </head>
+  <!-- TODO: CHANGE FONT, ANIMATIONS, DROPDOWN ELEMENTS, JS -->
+  <body class="preload | relative bg-almost-white max-lg:before:bg-[#00000080]">
+    <header>
+      <section class="max-container | relative active">
+        <nav
+          class="flex max-lg:justify-between py-8 px-10 max-lg:py-6 max-lg:px-5 gap-14 font-semibold text-sm"
+        >
+          <a
+            href="/"
+            aria-label="Snap home page"
+          >
+            <svg class="icon | w-[5.5rem] h-[1.625rem]">
+              <use xlink:href="images/logo.svg#logo"></use>
+            </svg>
+          </a>
+          <div class="flex w-full max-lg:hidden justify-between leading-none">
+            <!-- TODO: BUTTON SVG TO BE FIXED -->
+            <ul class="flex gap-10 text-medium-gray">
+              <li class="relative">
+                <button
+                  class="nav__button-dropdown | flex items-center hover:text-almost-black hover:transition-colors hover:duration-300 active:opacity-75"
+                >
+                  Features&nbsp;
+                  <span>
+                    <svg class="icon | size-3">
+                      <use xlink:href="images/icons.svg#icon-arrow-down"></use>
+                    </svg>
+                  </span>
+                </button>
+                <!-- Dropdown menu -->
+                <ul
+                  class="dropdown | absolute top-8 right-0 flex-col px-6 bg-[#fff] rounded-xl font-medium text-sm"
+                  aria-hidden="true"
+                >
+                  <li class="mt-6">
+                    <a
+                      class="flex gap-4 hover:text-almost-black hover:transition-colors hover:duration-300 hover:border-almost-black active:opacity-75"
+                      href="#todo-list"
+                    >
+                      <span>
+                        <svg class="icon | size-4">
+                          <use xlink:href="images/icons.svg#icon-todo"></use>
+                        </svg>
+                      </span>
+                      Todo List
+                    </a>
+                  </li>
+                  <li class="mt-3">
+                    <a
+                      class="flex gap-4 hover:text-almost-black hover:transition-colors hover:duration-300 hover:border-almost-black active:opacity-75"
+                      href="#calendar"
+                    >
+                      <span>
+                        <svg class="icon | size-4">
+                          <use
+                            xlink:href="images/icons.svg#icon-calendar"
+                          ></use>
+                        </svg>
+                      </span>
+                      Calendar
+                    </a>
+                  </li>
+                  <li class="mt-3">
+                    <a
+                      class="flex gap-4 hover:text-almost-black hover:transition-colors hover:duration-300 hover:border-almost-black active:opacity-75"
+                      href="#reminders"
+                    >
+                      <span>
+                        <svg class="icon | size-4">
+                          <use
+                            xlink:href="images/icons.svg#icon-reminders"
+                          ></use>
+                        </svg>
+                      </span>
+                      Reminders
+                    </a>
+                  </li>
+                  <li class="mt-3 mb-6">
+                    <a
+                      class="flex gap-4 hover:text-almost-black hover:transition-colors hover:duration-300 hover:border-almost-black active:opacity-75"
+                      href="#planning"
+                    >
+                      <span>
+                        <svg class="icon | size-4">
+                          <use
+                            xlink:href="images/icons.svg#icon-planning"
+                          ></use>
+                        </svg>
+                      </span>
+                      Planning
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="relative">
+                <button
+                  class="nav__button-dropdown | flex items-center hover:text-almost-black hover:transition-colors hover:duration-300 active:opacity-75"
+                >
+                  Company&nbsp;
+                  <span>
+                    <svg class="icon | size-3">
+                      <use xlink:href="images/icons.svg#icon-arrow-down"></use>
+                    </svg>
+                  </span>
+                </button>
+                <!-- Dropdown menu -->
+                <ul
+                  class="dropdown | absolute top-8 left-0 flex-col px-6 gap-3 bg-[#fff] rounded-xl font-medium text-sm"
+                  aria-hidden="true"
+                >
+                  <li class="mt-6">
+                    <a
+                      class="hover:text-almost-black hover:transition-colors hover:duration-300 hover:border-almost-black active:opacity-75"
+                      href="#history"
+                      >History</a
+                    >
+                  </li>
+                  <li class="mt-3">
+                    <a
+                      class="text-nowrap hover:text-almost-black hover:transition-colors hover:duration-300 hover:border-almost-black active:opacity-75"
+                      href="#our-team"
+                      >Our Team</a
+                    >
+                  </li>
+                  <li class="mt-3 mb-6">
+                    <a
+                      class="hover:text-almost-black hover:transition-colors hover:duration-300 hover:border-almost-black active:opacity-75"
+                      href="#Blog"
+                      >Blog</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a
+                  class="hover:text-almost-black hover:transition-colors hover:duration-300 active:opacity-75"
+                  href="#"
+                  >Careers</a
+                >
+              </li>
+              <li>
+                <a
+                  class="hover:text-almost-black hover:transition-colors hover:duration-300 active:opacity-75"
+                  href="#"
+                  >About</a
+                >
+              </li>
+            </ul>
+            <ul class="flex gap-10 text-medium-gray">
+              <li>
+                <a
+                  class="hover:text-almost-black hover:transition-colors hover:duration-300 active:opacity-75"
+                  href="#"
+                  >Login</a
+                >
+              </li>
+              <li>
+                <a
+                  class="border-[2px] py-3 px-5 rounded-[.875rem] border-medium-gray hover:text-almost-black hover:transition-colors hover:duration-300 hover:border-almost-black active:opacity-75"
+                  href="#"
+                  >Register</a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <button
+          class="nav__button-menu | absolute right-4 top-8 lg:hidden z-50"
+        >
+          <div class="menu-icon"></div>
+        </button>
+        <!-- Mobile navigation -->
+        <nav
+          class="mobile-nav | fixed top-0 right-0 bottom-0 lg:hidden w-60 pt-20 px-6 bg-almost-white font-semibold z-40"
+        >
+          <div class="w-full justify-between leading-none">
+            <ul class="flex flex-col gap-10 text-medium-gray">
+              <li class="relative">
+                <button
+                  class="button__dropdown-mobile | flex items-center hover:text-almost-black hover:transition-colors hover:duration-300 active:opacity-75"
+                >
+                  Features&nbsp;
+                  <span>
+                    <svg class="icon | size-3">
+                      <use xlink:href="images/icons.svg#icon-arrow-down"></use>
+                    </svg>
+                  </span>
+                </button>
+                <!-- Dropdown menu -->
+                <ul
+                  class="mobile-dropdown | px-6 bg-almost-white rounded-xl font-medium"
+                  aria-hidden="true"
+                >
+                  <li class="mt-8">
+                    <a
+                      class="link flex gap-4 hover:text-almost-black hover:transition-colors hover:duration-300 hover:border-almost-black active:opacity-75"
+                      href="#todo-list"
+                    >
+                      <span>
+                        <svg class="icon | size-5">
+                          <use xlink:href="images/icons.svg#icon-todo"></use>
+                        </svg>
+                      </span>
+                      Todo List
+                    </a>
+                  </li>
+                  <li class="mt-5">
+                    <a
+                      class="link flex gap-4 hover:text-almost-black hover:transition-colors hover:duration-300 hover:border-almost-black active:opacity-75"
+                      href="#calendar"
+                    >
+                      <span>
+                        <svg class="icon | size-5">
+                          <use
+                            xlink:href="images/icons.svg#icon-calendar"
+                          ></use>
+                        </svg>
+                      </span>
+                      Calendar
+                    </a>
+                  </li>
+                  <li class="mt-5">
+                    <a
+                      class="link flex gap-4 hover:text-almost-black hover:transition-colors hover:duration-300 hover:border-almost-black active:opacity-75"
+                      href="#reminders"
+                    >
+                      <span>
+                        <svg class="icon | size-5">
+                          <use
+                            xlink:href="images/icons.svg#icon-reminders"
+                          ></use>
+                        </svg>
+                      </span>
+                      Reminders
+                    </a>
+                  </li>
+                  <li class="mt-5">
+                    <a
+                      class="link flex gap-4 hover:text-almost-black hover:transition-colors hover:duration-300 hover:border-almost-black active:opacity-75"
+                      href="#planning"
+                    >
+                      <span>
+                        <svg class="icon | size-5">
+                          <use
+                            xlink:href="images/icons.svg#icon-planning"
+                          ></use>
+                        </svg>
+                      </span>
+                      Planning
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="relative">
+                <button
+                  class="button__dropdown-mobile | flex items-center hover:text-almost-black hover:transition-colors hover:duration-300 active:opacity-75"
+                >
+                  Company&nbsp;
+                  <span>
+                    <svg class="icon | size-3">
+                      <use xlink:href="images/icons.svg#icon-arrow-down"></use>
+                    </svg>
+                  </span>
+                </button>
+                <!-- Dropdown menu -->
+                <ul
+                  class="mobile-dropdown | px-6 bg-almost-white rounded-xl font-medium"
+                  aria-hidden="true"
+                >
+                  <li class="mt-7">
+                    <a
+                      class="hover:text-almost-black hover:transition-colors hover:duration-300 hover:border-almost-black active:opacity-75"
+                      href="#history"
+                      >History</a
+                    >
+                  </li>
+                  <li class="mt-5">
+                    <a
+                      class="text-nowrap hover:text-almost-black hover:transition-colors hover:duration-300 hover:border-almost-black active:opacity-75"
+                      href="#our-team"
+                      >Our Team</a
+                    >
+                  </li>
+                  <li class="mt-5">
+                    <a
+                      class="hover:text-almost-black hover:transition-colors hover:duration-300 hover:border-almost-black active:opacity-75"
+                      href="#Blog"
+                      >Blog</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a
+                  class="hover:text-almost-black hover:transition-colors hover:duration-300 active:opacity-75"
+                  href="#"
+                  >Careers</a
+                >
+              </li>
+              <li>
+                <a
+                  class="hover:text-almost-black hover:transition-colors hover:duration-300 active:opacity-75"
+                  href="#"
+                  >About</a
+                >
+              </li>
+            </ul>
+            <ul class="flex flex-col pt-11 gap-10 text-center text-medium-gray">
+              <li>
+                <a
+                  class="hover:text-almost-black hover:transition-colors hover:duration-300 active:opacity-75"
+                  href="#"
+                  >Login</a
+                >
+              </li>
+              <li>
+                <a
+                  class="w-full inline-block border-[2px] py-3 px-5 rounded-[.875rem] border-medium-gray hover:text-almost-black hover:transition-colors hover:duration-300 hover:border-almost-black active:opacity-75"
+                  href="#"
+                  >Register</a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </section>
+    </header>
+    <main class="pb-30">
+      <section
+        class="max-container | flex max-lg:flex-wrap-reverse lg:pt-10 items-center justify-center"
+      >
+        <div
+          class="grid max-lg:place-items-center place-self-end gap-12 max-md:gap-7 max-xl:pl-36 xl:pl-[10.25rem] max-lg:py-10 max-lg:px-3 max-lg:text-center"
+        >
+          <h1
+            class="text-[4.9rem] max-xl:text-7xl max-md:text-4xl max-sm:text-4xl text-almost-black font-bold leading-none"
+          >
+            Make remote work
+          </h1>
+          <p
+            class="lg:max-w-[25rem] lg:mb-1 lg:text-lg text-medium-gray font-medium"
+          >
+            Get your team in sync, no matter your location. Streamline
+            processes, create team rituals, and watch productivity soar
+          </p>
+          <a
+            class="inline-block lg:mb-9 lg:mt-6 py-3 px-8 max-md:py-2 max-md:px-6 rounded-[.875rem] lg:text-lg bg-almost-black text-almost-white font-medium border-[1px] border-almost-black hover:bg-almost-white hover:text-almost-black hover:transition-colors hover:duration-300 ease-in-out active:opacity-75 w-fit"
+            href="#"
+            >Learn more</a
+          >
+
+          <ul
+            class="flex items-center max-lg:justify-center lg:-mb-2 max-lg:mt-4 gap-10 max-md:gap-7"
+          >
+            <li>
+              <a
+                href="#"
+                aria-label="Snap with client - Databiz company"
+              >
+                <svg
+                  class="icon | w-[7.125rem] max-md:w-20 max-h-5 fill-[#ADADAD] hover:fill-almost-black hover:transition-colors hover:duration-500 active:opacity-75"
+                >
+                  <use xlink:href="images/clients.svg#client-databiz"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:"
+                aria-label="Snap with client - Audiophile company"
+              >
+                <svg
+                  class="icon | w-[4.5rem] max-md:w-[3.25rem] max-h-9 fill-[#ADADAD] hover:fill-almost-black hover:transition-colors hover:duration-500 active:opacity-75"
+                >
+                  <use xlink:href="images/clients.svg#client-audiophile"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:"
+                aria-label="Snap with client - Meet company"
+              >
+                <svg
+                  class="icon | w-[5.625rem] max-md:w-16 max-h-5 fill-[#ADADAD] hover:fill-almost-black hover:transition-colors hover:duration-500 active:opacity-75"
+                >
+                  <use xlink:href="images/clients.svg#client-meet"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:"
+                aria-label="Snap with client - Maker company"
+              >
+                <svg
+                  class="icon | w-[5.125rem] max-md:w-[3.75rem] max-h-6 fill-[#ADADAD] hover:fill-almost-black hover:transition-colors hover:duration-500 active:opacity-75"
+                >
+                  <use xlink:href="images/clients.svg#client-maker"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <img
+          class="max-xl:max-w-[25rem] max-w-[30rem] mr-32 max-xl:ml-5 max-lg:hidden"
+          src="images/image-hero-desktop.png"
+          alt=""
+        />
+        <img
+          class="w-full max-w-[30rem] lg:hidden"
+          src="images/image-hero-mobile.png"
+          alt=""
+        />
+      </section>
+    </main>
+    <script
+      type="module"
+      src="main.js"
+    ></script>
+  </body>
+</html>
